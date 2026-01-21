@@ -1,0 +1,10 @@
+.divRow {
+    display: flex;
+}
+
+.divSquare {
+    flex: 0, 0, 0;
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+}
