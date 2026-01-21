@@ -1,14 +1,12 @@
 const container = document.querySelector("#container");
 
-const divRow = document.createElement("div");
-divRow.classList.add('divRow')
-container.appendChild(divRow)
-
-
-const squareDiv = document.createElement("div");
-squareDiv.classList.add('divSquare')
-divRow.appendChild(squareDiv)
-
-const squareDiv2 = document.createElement("div");
-squareDiv2.classList.add('divSquare')
-divRow.appendChild(squareDiv2)
+for (i = 0; i < 16; i++) {
+    let divRow = document.createElement("div");
+    divRow.classList.add('divRow')
+    container.appendChild(divRow)
+    for (j = 0; j < 16; j++) {
+        const squareDiv3 = document.createElement("div");
+        squareDiv3.classList.add('divSquare')
+        divRow.appendChild(squareDiv3)
+    }
+}
