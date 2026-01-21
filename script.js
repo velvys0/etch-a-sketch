@@ -1,13 +1,13 @@
 const container = document.querySelector("#container");
 
+resolution = 16
 
 
-
-for (i = 0; i < 16; i++) {
+for (i = 0; i < resolution; i++) {
     let divRow = document.createElement("div");
     divRow.classList.add('divRow')
     container.appendChild(divRow)
-    for (j = 0; j < 16; j++) {
+    for (j = 0; j < resolution; j++) {
         const divSquare = document.createElement("div");
         divSquare.classList.add('divSquare')
         divRow.appendChild(divSquare)
@@ -22,6 +22,10 @@ allDivSquare.forEach((square) => {
     })
 })
 
+
 const buttonChangePixels = document.querySelector('button')
 
-buttonChangePixels.addEventListener('click', () => console.log('wahou'))
+buttonChangePixels.addEventListener('click', () => {
+    let newRes = prompt("Entrer une résolution de pixels jusqu'à 100")
+    resolution = newRes
+})
